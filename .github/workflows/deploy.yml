@@ -12,9 +12,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: yarn
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+          cache: npm
+      - run: npm ci
+      - run: npm run build
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
